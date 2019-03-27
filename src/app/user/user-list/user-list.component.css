@@ -1,0 +1,21 @@
+.user-toolbar button {
+  margin-left: 10px;
+}
+
+.mat-table {
+  overflow: auto;
+  max-height: 500px;
+}
+
+.mat-column-select {
+  overflow: visible;
+}
+
+.mat-cell-center {
+  display: flex;
+  justify-content: center;
+}
+
+.mat-cell-center button {
+  margin-left: 10px;
+}

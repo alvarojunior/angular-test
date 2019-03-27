@@ -1,0 +1,24 @@
+<div *ngIf="user">
+  <form (ngSubmit)="save()" #userForm="ngForm">
+    <h2 class="mat-h2">Editing - {{ user.firstName }}</h2>
+    <div class="form-container">
+      <mat-form-field hintLabel="Max 100 characters">
+        <input matInput [(ngModel)]="user.firstName" name="firstName" required maxlength="100" placeholder="First Name">
+      </mat-form-field>
+      <br>
+      <mat-form-field hintLabel="Max 100 characters">
+        <input matInput [(ngModel)]="user.lastName" name="lastName" required maxlength="100" placeholder="Last Name">
+      </mat-form-field>
+      <br>
+      <mat-form-field hintLabel="Max 100 characters">
+        <input matInput type="number" [(ngModel)]="user.age" name="age" required placeholder="Age">
+      </mat-form-field>
+    </div>
+    <p class="buttons">
+      <button type="button" (click)="cancel(userForm.form.dirty)" mat-raised-button>Cancel</button>
+      <button type="submit" [disabled]="!userForm.form.valid" mat-raised-button color="primary">
+        Save
+      </button>
+    </p>
+  </form>
+</div>
