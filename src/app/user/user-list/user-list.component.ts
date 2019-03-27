@@ -48,7 +48,7 @@ export class UserListComponent implements OnInit {
       this.dataSource.data = this.users;
       this.toastr.success('User removed!', 'Success');
     }, () => {
-      this.toastr.success('Error While Trying to Delete User', 'Error');
+      this.toastr.error('Error While Trying to Delete User', 'Error');
     });
   }
 
@@ -89,7 +89,7 @@ export class UserListComponent implements OnInit {
       saveAs(blob, filename);
     } catch (e) {
       console.error(e);
-      this.toastr.success('Error While Trying to Download Users', 'Error');
+      this.toastr.error('Error While Trying to Download Users', 'Error');
     }
   }
 
